@@ -1,0 +1,16 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+const firebaseConfig = {
+  
+  
+  apiKey: "AIzaSyDLJ2BKyVm_9rJHFGZ2dzk0CLjDh_EAMNM",
+    authDomain: "tranotrano-a7ca1.firebaseapp.com",
+    projectId: "tranotrano-a7ca1",
+    storageBucket: "tranotrano-a7ca1.firebasestorage.app",
+    messagingSenderId: "510463405480",
+    appId: "1:510463405480:web:019abb4b070aca6bc6819d"
+  };
+
+  
+
+export const app = initializeApp(firebaseConfig);

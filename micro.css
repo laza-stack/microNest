@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --bg:#f6f7fb;
+    --surface:#ffffff;
+    --text:#0b1220;
+    --muted:#6b7280;
+
+    --primary:#5b5ef7;
+    --primary2:#3b3ee0;
+
+    --border:rgba(15,23,42,0.08);
+
+    --shadow-sm:0 6px 18px rgba(15,23,42,0.06);
+    --shadow-md:0 12px 30px rgba(15,23,42,0.10);
+    --shadow-lg:0 25px 60px rgba(15,23,42,0.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter",sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 28px;
+    background:rgba(255,255,255,0.8);
+    backdrop-filter: blur(14px);
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-size:1.5rem;
+    font-weight:800;
+    color:var(--primary);
+    letter-spacing:-0.5px;
+}
+
+.lang-selector{
+    padding:8px 12px;
+    border-radius:10px;
+    border:1px solid var(--border);
+    background:white;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero-container{
+    min-height:85vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-container h1{
+    font-size:3rem;
+    font-weight:800;
+    letter-spacing:-1.5px;
+    line-height:1.1;
+}
+
+.hero-container p{
+    margin-top:12px;
+    font-size:1.15rem;
+    color:var(--muted);
+    max-width:540px;
+}
+
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:14px;
+}
+
+/* ================= BUTTONS ================= */
+
+button{
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    transition:all .25s ease;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    color:white;
+    padding:12px 18px;
+    border-radius:14px;
+    box-shadow:var(--shadow-sm);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-md);
+}
+
+.btn-secondary{
+    background:white;
+    border:1px solid var(--border);
+    padding:12px 18px;
+    border-radius:14px;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow-sm);
+}
+
+.btn-submit,
+.btn-submit-blue{
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    color:white;
+    padding:11px 14px;
+    border-radius:12px;
+    box-shadow:var(--shadow-sm);
+}
+
+.btn-submit:hover,
+.btn-submit-blue:hover{
+    transform:translateY(-2px);
+}
+
+/* ================= MODAL ================= */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(10,15,30,0.55);
+    backdrop-filter: blur(16px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.modal-card{
+    width:92%;
+    max-width:450px;
+    background:white;
+    border-radius:20px;
+    padding:26px;
+    box-shadow:var(--shadow-lg);
+    border:1px solid var(--border);
+}
+
+.btn-close{
+    position:absolute;
+    top:14px;
+    right:14px;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:#f1f5f9;
+}
+
+/* ================= INPUTS ================= */
+
+input,textarea{
+    width:100%;
+    padding:12px 14px;
+    border-radius:14px;
+    border:1px solid var(--border);
+    outline:none;
+    background:white;
+}
+
+input:focus,textarea:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(91,94,247,0.15);
+}
+
+/* ================= DASHBOARD ================= */
+
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 18px;
+}
+
+.welcome-box{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:var(--shadow-sm);
+    border:1px solid var(--border);
+}
+
+/* ================= MENU ================= */
+
+.function-menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:16px;
+    margin-top:18px;
+}
+
+.menu-card{
+    background:white;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:var(--shadow-sm);
+    border:1px solid var(--border);
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-md);
+}
+
+/* ================= SUB PAGES ================= */
+
+.sub-page{
+    margin-top:18px;
+    background:white;
+    border-radius:20px;
+    padding:22px;
+    box-shadow:var(--shadow-md);
+    border:1px solid var(--border);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.sub-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-bottom:12px;
+    border-bottom:1px solid var(--border);
+}
+
+.sub-header h3{
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+/* ================= FORMS ================= */
+
+.inline-form{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    background:#f8fafc;
+    padding:12px;
+    border-radius:16px;
+    border:1px solid var(--border);
+}
+
+/* ================= SEARCH ================= */
+
+.search-box input{
+    background:#f8fafc;
+}
+
+/* ================= LISTS ================= */
+
+#objectList,
+#reminderList,
+#messageBoard{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:10px;
+}
+
+/* ================= CARDS ================= */
+
+.card-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:16px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow-sm);
+    transition:.25s;
+    position:relative;
+}
+
+.card-item::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background:linear-gradient(var(--primary),var(--primary2));
+}
+
+#objectList .card-item::before{ background:#22c55e; }
+#reminderList .card-item::before{ background:#f59e0b; }
+#messageBoard .card-item::before{ background:#6366f1; }
+
+.card-item:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-md);
+}
+
+.card-item button{
+    background:#fee2e2;
+    color:#ef4444;
+    border:none;
+    padding:8px 12px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.card-item button:hover{
+    background:#fecaca;
+    transform:scale(1.05);
+}
+
+/* ================= UTILITY ================= */
+
+.hidden{
+    display:none !important;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+    .hero-container h1{
+        font-size:2.2rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .inline-form{
+        flex-direction:column;
+    }
+
+    .card-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+}
+
+.btn-back{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.btn-back .icon{
+    font-size:18px;
+    opacity:0.8;
+}
+
+
+.card-item{
+    animation:fadeIn .25s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(8px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+
+.btn-add{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    color:white;
+    font-size:24px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:var(--shadow-md);
+    transition:.2s;
+}
+
+.btn-add:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:var(--shadow-lg);
+}
+
+.btn-add:active{
+    transform:scale(0.95);
+}
+
+
+
+
+
+.back-btn{
+    padding:8px 12px;
+    border-radius:12px;
+    background:#f1f5f9;
+    border:1px solid var(--border);
+    transition:.2s;
+    font-weight:600;
+}
+
+.btn-back:hover{
+    background:white;
+    transform:translateX(-3px);
+    box-shadow:var(--shadow-sm);
+}
+
+
+
+
+
+
+.sub-page{
+    backdrop-filter: blur(10px);
+    background:rgba(255,255,255,0.85);
+}
+
+
+
+.card-item:hover{
+    transform:translateY(-4px) scale(1.01);
+    box-shadow:var(--shadow-lg);
+}
+
+.search-box {
+    margin: 10px 0;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: #f8fafc;
+    font-weight: 500;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(91, 94, 247, 0.15);
+}
+
+.letter-title{
+    margin-top:14px;
+    font-size:16px;
+    font-weight:800;
+    color:var(--primary);
+    padding:6px 0;
+    border-bottom:1px solid var(--border);
+}
+
+
+
+.letter-title {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #ffffff, #f8fafc);
+    padding: 10px 12px;
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--primary);
+    border-bottom: 1px solid var(--border);
+    z-index: 2;
+}
+
+.card-item {
+    margin-left: 6px;
+}
+
+
+
+
+
+
+.reminder-card{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.reminder-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.badge{
+    padding:4px 10px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:600;
+}
+
+.badge.green{ background:#dcfce7; color:#166534; }
+.badge.orange{ background:#ffedd5; color:#9a3412; }
+.badge.red{ background:#fee2e2; color:#991b1b; }
+
+.progress{
+    height:6px;
+    background:#e5e7eb;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    background:linear-gradient(90deg,#22c55e,#f59e0b,#ef4444);
+}
+
+.btn-done{
+    background:#e0f2fe;
+    color:#0284c7;
+    padding:6px 10px;
+    border-radius:10px;
+    border:none;
+}
+
+
+
+.message-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.message-card p {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--text);
+    word-break: break-word;
+}
+
+.message-card small {
+    font-size: 0.75rem;
+    color: var(--muted);
+}
